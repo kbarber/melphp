@@ -5,7 +5,7 @@
     $ docker run -d -v `pwd`:/app -p 8080:80 tutum/lamp
     1d1773a74eee
 
-Remeber the ID, you'll need it later
+Remember the ID, you'll need it later
 
 ## Creating the table
 
