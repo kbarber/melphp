@@ -1,0 +1,40 @@
+body {
+    background: #d2f1f5;
+    font-family: Georgia, Serif;
+}
+
+h3 a {
+    font-size: 16px;
+    margin-left: 10px;
+    color: #444;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+}
+
+#game a {
+    display: inline-block;
+    width: 140px;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+}
+
+#game a img {
+    border: 3px dashed #555;
+    margin-top: 3px;
+}
+
+#scores {
+    margin-top: 20px;
+    height: 300px;
+    background: #fff;
+    width: 310px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
