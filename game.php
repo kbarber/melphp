@@ -4,7 +4,7 @@
 if(isset($_POST['submit']) == TRUE):
 
     // Hold a variable, strip insecure elements for database
-    $username = trim(mysql_real_escape_string(strip_tags(stripslashes($_POST['username']))));
+    $username = $_POST['username'];
 
     // Store our username in the session
     $_SESSION['username'] = $username;
