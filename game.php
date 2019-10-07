@@ -1,10 +1,5 @@
 <?php
 //session_destroy();
-$con = mysql_connect('localhost', 'root', '')
-    or die(mysql_error());
-
-mysql_select_db('games', $con)
-    or die(mysql_error());
 
 if(isset($_POST['submit']) == TRUE):
 
@@ -93,33 +88,10 @@ function game() {
         // Add a bak link
         echo '<br/><a href="./">Play again</a>';
 
-        $sql = "INSERT INTO rock_paper_scissors VALUES (NULL, '" . $_SESSION['username'] . "', '$outcome')";
-        $res = mysql_query($sql) or die(mysql_error());
     else :
         display_items();
     endif;
 
 }
 
-function scores() {
-    // SQL query to get out username and # of wins, losses or ties
-    $sql = 'select
-        username,
-        sum(case when win = "yes" then 1 else 0 end) win,
-        sum(case when win = "no" then 1 else 0 end) loss,
-        sum(case when win = "tie" then 1 else 0 end) tie
-        from rock_paper_scissors
-        group by username;';
-
-    $res = mysql_query($sql) or die(mysql_error());
-    while ($row = mysql_fetch_assoc($res)) {
-        echo '<tr>';
-        echo '<td>' . $row['username'] . '</td>';
-        echo '<td>' . $row['win'] . '</td>';
-        echo '<td>' . $row['loss'] . '</td>';
-        echo '<td>' . $row['tie'] . '</td>';
-        echo '</tr>';
-    }
-
-}
 ?>

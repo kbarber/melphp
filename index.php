@@ -24,18 +24,6 @@
     </div>
 <?php endif; ?>
 
-<div id="scores">
-    <table border="1" cellspacing="5" cellpadding="5">
-        <tr>
-            <th>Username:</th>
-            <th>Win:</th>
-            <th>Lost:</th>
-            <th>Ties:</th>
-        </tr>
-        <?php scores() ?>
-    </table>
-</div>
-
 </body>
 
 </html>
